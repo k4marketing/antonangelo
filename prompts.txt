@@ -1,0 +1,169 @@
+Script para Criação de Site - Vallini Odontologia (versão com imagens do cliente)
+1. Estrutura Geral do Site
+
+Estilo: luxuoso, minimalista e profissional.
+
+Paleta de cores: branco, dourado e preto.
+
+Tipografia: Playfair Display (títulos) + Montserrat (textos).
+
+Uso de bastante espaço em branco, ícones modernos e detalhes dourados.
+
+As imagens serão fornecidas pelo cliente e devem ser tratadas para se manter no padrão de luxo (tons suaves, filtros clean, enquadramento profissional).
+
+2. Home
+
+Header fixo minimalista com logo (Vallini Odontologia) e menu.
+
+Hero Section (chamada principal)
+
+Imagem de fundo (cliente enviará).
+
+Texto:
+“Sorriso é Luxo. Cuidado é Vallini Odontologia.”
+
+Botão CTA dourado: “Agende sua consulta agora” (link direto para WhatsApp).
+
+Destaques Rápidos (3 ícones + imagens enviadas pelo cliente):
+
+Odontopediatria
+
+Harmonização Orofacial
+
+Especialidades
+
+3. Sobre Nós
+
+Imagem do consultório ou da equipe (cliente enviará).
+
+Texto:
+“Especialistas em transformar sorrisos em obras-primas. Atuamos em Guapirama e região com tecnologia, segurança e excelência em Odontologia.”
+
+4. Especialidades
+
+Sessão dividida em blocos minimalistas.
+
+Cada bloco terá:
+
+Imagem fornecida pelo cliente (tratada em tons clean).
+
+Texto breve.
+
+Botão “Saiba Mais”.
+
+Especialidades:
+
+Odontopediatria
+
+Harmonização Orofacial
+
+Implantes Dentários
+
+Ortodontia
+
+Clareamento Dental
+
+5. Galeria / Antes & Depois
+
+Cliente enviará imagens reais de procedimentos.
+
+Criar carrossel clean e elegante para mostrar transformações.
+
+Bordas arredondadas, fundo branco, legendas discretas.
+
+6. Depoimentos
+
+Fundo cinza claro com aspas douradas.
+
+Espaço para foto de pacientes (caso o cliente envie).
+
+Texto de depoimentos + estrelas douradas.
+
+7. Contato & Localização
+
+Chamada forte com fundo em destaque (imagem enviada pelo cliente).
+“Estamos prontos para cuidar do seu sorriso. Agende agora mesmo!”
+
+Botões:
+
+WhatsApp (CTA principal)
+
+Telefone: (43) 99135-9995 / (43) 99191-3310
+
+E-mail: vallinidonto@gmail.com
+
+Endereço destacado:
+Rua Dezenove de Dezembro, 150 – Guapirama – PR
+
+Mapa interativo (Google Maps).
+
+8. Rodapé
+
+Logo minimalista dourado (já existente).
+
+Ícones sociais (Instagram, WhatsApp, Facebook).
+
+Direitos autorais:
+© 2025 Vallini Odontologia – Todos os direitos reservados.
+
+9. Chamadas para Ação
+
+Botão fixo de Agende sua Consulta via WhatsApp em todas as páginas.
+
+Destaque em dourado.
+
+10. Requisitos Técnicos
+
+Layout 100% responsivo.
+
+Animações suaves (fade-in, parallax discreto).
+
+Performance otimizada.
+
+SEO configurado (Odontologia Guapirama, Harmonização Orofacial, Dentista Guapirama).
+
+11. Imagens
+
+O cliente enviará imagens específicas para:
+
+Hero Section (Home) – fundo de impacto.
+
+Sobre Nós – equipe/consultório.
+
+Especialidades – imagens ilustrativas de cada procedimento.
+
+Galeria Antes & Depois – fotos de resultados reais.
+
+Sessão Contato – imagem de apoio clean.
+
+As imagens devem ser editadas/tratadas para manter o padrão:
+
+Filtros clean (tons claros, brancos e dourados em destaque).
+
+Evitar excesso de elementos para manter o minimalismo.
+adicionar imagens ao site 
+criar uma imagem de acordo 
+add photos to website
+add photos to website
+add the photo to the website
+add the photo to the website
+add the photo to the website
+add the photo to the website
+add the photo to the website
+add the photo to the website
+the map location is wrong change to the link location. https://www.google.com/maps/place/Vallini+odontologia+especializada/@-23.5164062,-50.0421162,16.25z/data=!4m6!3m5!1s0x94ea79b24d1040f7:0x1bca31e1566fecb3!8m2!3d-23.5160031!4d-50.0407217!16s%2Fg%2F11v9_py54n?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D
+create a database where I enter with login: NatyVallini and password: natyadmin I can change any image on my website
+add image to website
+add image to website
+add image to website
+add image to website
+add image to website
+add image to website
+add image to website
+add image to website
+add image to website
+change to a woman's profile picture
+change to a woman's profile picture
+change to a female photo
+change to a female photo
+change to image of a lady
