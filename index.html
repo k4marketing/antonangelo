@@ -138,14 +138,17 @@
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
+        .hero-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(52, 52, 51, 0.8) 0%, rgba(42, 42, 41, 0.8) 100%);
+            background-image: url('img/logo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2;
             z-index: 1;
         }
 
@@ -155,21 +158,6 @@
             max-width: 800px;
             padding: 0 20px;
             position: relative;
-        }
-
-        .logo-background {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.15;
-            z-index: -1;
-        }
-
-        .logo-background img {
-            width: 600px;
-            height: auto;
-            object-fit: contain;
         }
 
         .hero h1 {
@@ -941,10 +929,6 @@
             .section-title {
                 font-size: 2.2rem;
             }
-            
-            .logo-background img {
-                width: 400px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -958,10 +942,6 @@
 
             .about-text h2, .location-text h2 {
                 font-size: 2.2rem;
-            }
-            
-            .logo-background img {
-                width: 300px;
             }
         }
     </style>
@@ -986,10 +966,8 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background"></div>
         <div class="hero-content">
-            <div class="logo-background">
-                <img src="img/logo.png" alt="Logo Antonangelo Pratas">
-            </div>
             <h1>ANTONANGELO PRATAS</h1>
             <p>Descubra o Luxo da Prata 925</p>
             <a href="https://api.whatsapp.com/send?phone=5514998801355&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20produtos.%20%F0%9F%98%81" class="cta-button" target="_blank">
