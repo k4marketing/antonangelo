@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="ico/logo.ico" type="image/x-icon">
     <title>ANTONANGELO PRATAS - Joias em Prata 925</title>
+    <link rel="icon" href="ico/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -117,10 +117,6 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            background-image: url('img/logo.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
         }
 
         .hero::before {
@@ -211,32 +207,6 @@
             background-color: var(--silver-metallic);
         }
 
-        .categories {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 50px;
-        }
-
-        .category-btn {
-            background: transparent;
-            border: 1px solid rgba(218, 218, 217, 0.3);
-            color: var(--text-light);
-            padding: 10px 25px;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .category-btn:hover, .category-btn.active {
-            background-color: var(--silver-metallic);
-            color: var(--background-dark);
-            border-color: var(--silver-metallic);
-        }
-
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -260,7 +230,6 @@
         .product-image {
             width: 100%;
             height: 250px;
-            background: linear-gradient(45deg, #4a4a49, #3a3a39);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -270,16 +239,10 @@
             overflow: hidden;
         }
 
-        .product-image::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(192, 192, 192, 0.1), transparent);
-            transform: rotate(45deg);
-            animation: shine 3s infinite;
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .product-info {
@@ -359,7 +322,6 @@
         }
 
         .about-image {
-            background: linear-gradient(45deg, #4a4a49, #3a3a39);
             height: 400px;
             border-radius: 8px;
             display: flex;
@@ -371,16 +333,11 @@
             overflow: hidden;
         }
 
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(192, 192, 192, 0.1), transparent);
-            transform: rotate(45deg);
-            animation: shine 4s infinite;
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
         }
 
         .quality-badge {
@@ -422,7 +379,6 @@
 
         .instagram-post {
             height: 250px;
-            background: linear-gradient(45deg, #4a4a49, #3a3a39);
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -433,6 +389,13 @@
             overflow: hidden;
             cursor: pointer;
             transition: all 0.3s ease;
+        }
+
+        .instagram-post img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
         }
 
         .instagram-post:hover {
@@ -766,19 +729,11 @@
         <div class="container">
             <h2 class="section-title">Nossas Joias</h2>
             
-            <div class="categories">
-                <button class="category-btn active">Todos</button>
-                <button class="category-btn">Pulseiras</button>
-                <button class="category-btn">Anéis</button>
-                <button class="category-btn">Dedeiras</button>
-                <button class="category-btn">Correntes</button>
-                <button class="category-btn">Colares</button>
-                <button class="category-btn">Brincos</button>
-            </div>
-
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-image">Imagem Pulseira</div>
+                    <div class="product-image">
+                        <img src="img/1.jpeg" alt="Pulseira Elegance">
+                    </div>
                     <div class="product-info">
                         <div class="product-header">
                             <h3 class="product-name">Pulseira Elegance</h3>
@@ -792,7 +747,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">Imagem Anel</div>
+                    <div class="product-image">
+                        <img src="img/2.jpeg" alt="Anel Clássico">
+                    </div>
                     <div class="product-info">
                         <div class="product-header">
                             <h3 class="product-name">Anel Clássico</h3>
@@ -806,7 +763,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">Imagem Dedeira</div>
+                    <div class="product-image">
+                        <img src="img/3.jpeg" alt="Dedeira Luxo">
+                    </div>
                     <div class="product-info">
                         <div class="product-header">
                             <h3 class="product-name">Dedeira Luxo</h3>
@@ -820,7 +779,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">Imagem Corrente</div>
+                    <div class="product-image">
+                        <img src="img/4.jpeg" alt="Corrente Premium">
+                    </div>
                     <div class="product-info">
                         <div class="product-header">
                             <h3 class="product-name">Corrente Premium</h3>
@@ -834,7 +795,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">Imagem Colar</div>
+                    <div class="product-image">
+                        <img src="img/5.jpeg" alt="Colar Sofia">
+                    </div>
                     <div class="product-info">
                         <div class="product-header">
                             <h3 class="product-name">Colar Sofia</h3>
@@ -848,7 +811,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">Imagem Brinco</div>
+                    <div class="product-image">
+                        <img src="img/6.jpeg" alt="Brinco Estrela">
+                    </div>
                     <div class="product-info">
                         <div class="product-header">
                             <h3 class="product-name">Brinco Estrela</h3>
@@ -880,7 +845,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    Loja Antonangelo Pratas
+                    <img src="img/sobre.jpeg" alt="Loja Antonangelo Pratas">
                 </div>
             </div>
         </div>
@@ -899,7 +864,7 @@
                             <div class="address-text">
                                 <strong>Endereço:</strong><br>
                                 Rua João Moya Restoy, 605<br>
-                                Ourinhos-SP
+                                Ourinhos - SP
                             </div>
                         </div>
                         <div class="address-item">
@@ -927,51 +892,29 @@
     </section>
 
     <!-- Instagram Section -->
-<section id="instagram">
-    <h2>Siga-nos no Instagram</h2>
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Siga-nos no Instagram</h2>
+            
+            <div class="instagram-posts">
+                <a href="https://www.instagram.com/reel/DOJ0XtiEe8l/?utm_source=ig_web_copy_link&igsh=MWV6dnIwaGo3YWpwZQ==" target="_blank" class="instagram-post">
+                    <img src="img/insta1.jpeg" alt="Post Instagram 1">
+                    <i class="fab fa-instagram instagram-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/p/DNBloPSy6I5/?utm_source=ig_web_copy_link&igsh=MWpqZ2k0MHphMjMzaA==" target="_blank" class="instagram-post">
+                    <img src="img/insta2.jpeg" alt="Post Instagram 2">
+                    <i class="fab fa-instagram instagram-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/p/DNBLHw9uoqk/?utm_source=ig_web_copy_link&igsh=MXZmamx3Y216c3QwYQ==" target="_blank" class="instagram-post">
+                    <img src="img/insta3.jpeg" alt="Post Instagram 3">
+                    <i class="fab fa-instagram instagram-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/p/DLAfqa6OKQm/?utm_source=ig_web_copy_link&igsh=dWU5eHV1a201d3U0" target="_blank" class="instagram-post">
+                    <img src="img/insta4.jpeg" alt="Post Instagram 4">
+                    <i class="fab fa-instagram instagram-icon"></i>
+                </a>
+            </div>
 
-    <div class="instagram-posts">
-        <a href="https://www.instagram.com/p/DNBloPSy6I5/" target="_blank">
-            <img src="https://www.instagram.com/p/DNBloPSy6I5/media/?size=l" alt="Post 1">
-        </a>
-        <a href="https://www.instagram.com/p/DLAfqa6OKQm/?img_index=1" target="_blank">
-            <img src="https://www.instagram.com/p/DLAfqa6OKQm/media/?size=l" alt="Post 2">
-        </a>
-        <a href="https://www.instagram.com/p/DLAaffUObwk/" target="_blank">
-            <img src="https://www.instagram.com/p/DLAaffUObwk/media/?size=l" alt="Post 3">
-        </a>
-        <a href="https://www.instagram.com/p/DIPNi34S7c0/?img_index=1" target="_blank">
-            <img src="https://www.instagram.com/p/DIPNi34S7c0/media/?size=l" alt="Post 4">
-        </a>
-    </div>
-</section>
-
-<style>
-#instagram {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.instagram-posts {
-    display: flex;
-    justify-content: center;  /* centraliza as imagens */
-    gap: 15px;                /* espaço entre elas */
-    flex-wrap: wrap;          /* quebra linha se faltar espaço */
-    margin-top: 20px;
-}
-
-.instagram-posts img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;        /* recorta para caber certinho */
-    border-radius: 10px;      /* cantos arredondados */
-    transition: transform 0.3s ease;
-}
-
-.instagram-posts img:hover {
-    transform: scale(1.05);   /* zoom suave no hover */
-}
-</style>
             <div class="instagram-cta">
                 <a href="https://www.instagram.com/antonangelo_pratas/" class="instagram-button" target="_blank">
                     Ver Mais no Instagram
@@ -1042,16 +985,6 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-            });
-        });
-
-        // Category button active state
-        document.querySelectorAll('.category-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.category-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                this.classList.add('active');
             });
         });
 
