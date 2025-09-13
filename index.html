@@ -927,29 +927,51 @@
     </section>
 
     <!-- Instagram Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Siga-nos no Instagram</h2>
-            
-            <div class="instagram-posts">
-                <a href="https://www.instagram.com/p/DNBloPSy6I5//?utm_source=ig_web_copy_link&igsh=MWV6dnIwaGo3YWpwZQ==" target="_blank" class="https://www.instagram.com/p/DNBloPSy6I5/">
-                    Post 1
-                    <i class="fab fa-instagram instagram-icon"></i>
-                </a>
-                <a href="https://www.instagram.com/p/DNBloPSy6I5/?utm_source=ig_web_copy_link&igsh=MWpqZ2k0MHphMjMzaA==" target="_blank" class="instagram-post">
-                    Post 2
-                    <i class="fab fa-instagram instagram-icon"></i>
-                </a>
-                <a href="https://www.instagram.com/p/DNBLHw9uoqk/?utm_source=ig_web_copy_link&igsh=MXZmamx3Y216c3QwYQ==" target="_blank" class="instagram-post">
-                    Post 3
-                    <i class="fab fa-instagram instagram-icon"></i>
-                </a>
-                <a href="https://www.instagram.com/p/DLAfqa6OKQm/?utm_source=ig_web_copy_link&igsh=dWU5eHV1a201d3U0" target="_blank" class="instagram-post">
-                    Post 4
-                    <i class="fab fa-instagram instagram-icon"></i>
-                </a>
-            </div>
+<section id="instagram">
+    <h2>Siga no Instagram</h2>
 
+    <div class="instagram-posts">
+        <a href="https://www.instagram.com/p/DNBloPSy6I5/" target="_blank">
+            <img src="https://www.instagram.com/p/DNBloPSy6I5/media/?size=l" alt="Post 1">
+        </a>
+        <a href="https://www.instagram.com/p/DLAfqa6OKQm/?img_index=1" target="_blank">
+            <img src="https://www.instagram.com/p/DLAfqa6OKQm/media/?size=l" alt="Post 2">
+        </a>
+        <a href="https://www.instagram.com/p/DLAaffUObwk/" target="_blank">
+            <img src="https://www.instagram.com/p/DLAaffUObwk/media/?size=l" alt="Post 3">
+        </a>
+        <a href="https://www.instagram.com/p/DIPNi34S7c0/?img_index=1" target="_blank">
+            <img src="https://www.instagram.com/p/DIPNi34S7c0/media/?size=l" alt="Post 4">
+        </a>
+    </div>
+</section>
+
+<style>
+#instagram {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.instagram-posts {
+    display: flex;
+    justify-content: center;  /* centraliza as imagens */
+    gap: 15px;                /* espaço entre elas */
+    flex-wrap: wrap;          /* quebra linha se faltar espaço */
+    margin-top: 20px;
+}
+
+.instagram-posts img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;        /* recorta para caber certinho */
+    border-radius: 10px;      /* cantos arredondados */
+    transition: transform 0.3s ease;
+}
+
+.instagram-posts img:hover {
+    transform: scale(1.05);   /* zoom suave no hover */
+}
+</style>
             <div class="instagram-cta">
                 <a href="https://www.instagram.com/antonangelo_pratas/" class="instagram-button" target="_blank">
                     Ver Mais no Instagram
