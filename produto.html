@@ -234,24 +234,29 @@
             background-color: var(--silver-metallic);
         }
 
-        .category-title {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 300;
-            margin: 60px 0 30px;
-            color: var(--silver-metallic);
-            position: relative;
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
         }
 
-        .category-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 1px;
+        .category-btn {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 1px solid var(--silver-metallic);
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+
+        .category-btn.active, .category-btn:hover {
             background-color: var(--silver-metallic);
+            color: var(--background-dark);
         }
 
         .products-grid {
@@ -267,6 +272,11 @@
             transition: all 0.3s ease;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(218, 218, 217, 0.1);
+            display: none;
+        }
+
+        .product-card.visible {
+            display: block;
         }
 
         .product-card:hover {
@@ -322,29 +332,6 @@
             font-size: 0.9rem;
             margin-bottom: 20px;
             font-weight: 400;
-        }
-
-        .whatsapp-button {
-            width: 100%;
-            background: transparent;
-            border: 1px solid var(--silver-metallic);
-            color: var(--silver-metallic);
-            padding: 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-weight: 500;
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 10px;
-        }
-
-        .whatsapp-button:hover {
-            background-color: var(--silver-metallic);
-            color: var(--background-dark);
         }
 
         .add-to-cart {
@@ -917,6 +904,15 @@
             .total-amount {
                 font-size: 1.2rem;
             }
+            
+            .category-filters {
+                gap: 10px;
+            }
+            
+            .category-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -971,10 +967,19 @@
         <div class="container">
             <h2 class="section-title">Nossas Joias</h2>
             
-            <!-- Pulseiras -->
-            <h3 class="category-title">Pulseiras</h3>
+            <!-- Filtros por Categoria -->
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">Todas</button>
+                <button class="category-btn" data-category="pulseiras">Pulseiras</button>
+                <button class="category-btn" data-category="aneis">Anéis</button>
+                <button class="category-btn" data-category="dedeiras">Dedeiras</button>
+                <button class="category-btn" data-category="correntes">Correntes</button>
+                <button class="category-btn" data-category="colares">Colares</button>
+                <button class="category-btn" data-category="brincos">Brincos</button>
+            </div>
+            
             <div class="products-grid">
-                <div class="product-card">
+                <div class="product-card" data-category="pulseiras">
                     <div class="product-image">
                         <img src="img/1.jpeg" alt="Pulseira Elegance">
                     </div>
@@ -984,20 +989,13 @@
                             <div class="product-price">R$ 299,90</div>
                         </div>
                         <div class="product-category">Pulseiras</div>
-                        <button class="whatsapp-button" onclick="window.open('https://api.whatsapp.com/send?phone=5514998801355&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20produtos.%20%F0%9F%98%81', '_blank')">
-                            <i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp
-                        </button>
                         <button class="add-to-cart" data-id="1" data-name="Pulseira Elegance" data-price="299.90" data-sku="P001">
                             <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
                         </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Anéis -->
-            <h3 class="category-title">Anéis</h3>
-            <div class="products-grid">
-                <div class="product-card">
+
+                <div class="product-card" data-category="aneis">
                     <div class="product-image">
                         <img src="img/2.jpeg" alt="Anel Clássico">
                     </div>
@@ -1007,20 +1005,13 @@
                             <div class="product-price">R$ 189,90</div>
                         </div>
                         <div class="product-category">Anéis</div>
-                        <button class="whatsapp-button" onclick="window.open('https://api.whatsapp.com/send?phone=5514998801355&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20produtos.%20%F0%9F%98%81', '_blank')">
-                            <i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp
-                        </button>
                         <button class="add-to-cart" data-id="2" data-name="Anel Clássico" data-price="189.90" data-sku="P002">
                             <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
                         </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Dedeiras -->
-            <h3 class="category-title">Dedeiras</h3>
-            <div class="products-grid">
-                <div class="product-card">
+
+                <div class="product-card" data-category="dedeiras">
                     <div class="product-image">
                         <img src="img/3.jpeg" alt="Dedeira Luxo">
                     </div>
@@ -1030,20 +1021,13 @@
                             <div class="product-price">R$ 149,90</div>
                         </div>
                         <div class="product-category">Dedeiras</div>
-                        <button class="whatsapp-button" onclick="window.open('https://api.whatsapp.com/send?phone=5514998801355&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20produtos.%20%F0%9F%98%81', '_blank')">
-                            <i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp
-                        </button>
                         <button class="add-to-cart" data-id="3" data-name="Dedeira Luxo" data-price="149.90" data-sku="P003">
                             <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
                         </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Correntes -->
-            <h3 class="category-title">Correntes</h3>
-            <div class="products-grid">
-                <div class="product-card">
+
+                <div class="product-card" data-category="correntes">
                     <div class="product-image">
                         <img src="img/4.jpeg" alt="Corrente Premium">
                     </div>
@@ -1053,20 +1037,13 @@
                             <div class="product-price">R$ 399,90</div>
                         </div>
                         <div class="product-category">Correntes</div>
-                        <button class="whatsapp-button" onclick="window.open('https://api.whatsapp.com/send?phone=5514998801355&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20produtos.%20%F0%9F%98%81', '_blank')">
-                            <i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp
-                        </button>
                         <button class="add-to-cart" data-id="4" data-name="Corrente Premium" data-price="399.90" data-sku="P004">
                             <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
                         </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Colares -->
-            <h3 class="category-title">Colares</h3>
-            <div class="products-grid">
-                <div class="product-card">
+
+                <div class="product-card" data-category="colares">
                     <div class="product-image">
                         <img src="img/5.jpeg" alt="Colar Sofia">
                     </div>
@@ -1076,20 +1053,13 @@
                             <div class="product-price">R$ 249,90</div>
                         </div>
                         <div class="product-category">Colares</div>
-                        <button class="whatsapp-button" onclick="window.open('https://api.whatsapp.com/send?phone=5514998801355&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20produtos.%20%F0%9F%98%81', '_blank')">
-                            <i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp
-                        </button>
                         <button class="add-to-cart" data-id="5" data-name="Colar Sofia" data-price="249.90" data-sku="P005">
                             <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
                         </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Brincos -->
-            <h3 class="category-title">Brincos</h3>
-            <div class="products-grid">
-                <div class="product-card">
+
+                <div class="product-card" data-category="brincos">
                     <div class="product-image">
                         <img src="img/6.jpeg" alt="Brinco Estrela">
                     </div>
@@ -1099,9 +1069,6 @@
                             <div class="product-price">R$ 129,90</div>
                         </div>
                         <div class="product-category">Brincos</div>
-                        <button class="whatsapp-button" onclick="window.open('https://api.whatsapp.com/send?phone=5514998801355&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20produtos.%20%F0%9F%98%81', '_blank')">
-                            <i class="fab fa-whatsapp"></i> Comprar pelo WhatsApp
-                        </button>
                         <button class="add-to-cart" data-id="6" data-name="Brinco Estrela" data-price="129.90" data-sku="P006">
                             <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
                         </button>
@@ -1291,42 +1258,42 @@
                 sku: "P001",
                 name: "Pulseira Elegance",
                 price: 299.90,
-                category: "Pulseiras"
+                category: "pulseiras"
             },
             {
                 id: 2,
                 sku: "P002",
                 name: "Anel Clássico",
                 price: 189.90,
-                category: "Anéis"
+                category: "aneis"
             },
             {
                 id: 3,
                 sku: "P003",
                 name: "Dedeira Luxo",
                 price: 149.90,
-                category: "Dedeiras"
+                category: "dedeiras"
             },
             {
                 id: 4,
                 sku: "P004",
                 name: "Corrente Premium",
                 price: 399.90,
-                category: "Correntes"
+                category: "correntes"
             },
             {
                 id: 5,
                 sku: "P005",
                 name: "Colar Sofia",
                 price: 249.90,
-                category: "Colares"
+                category: "colares"
             },
             {
                 id: 6,
                 sku: "P006",
                 name: "Brinco Estrela",
                 price: 129.90,
-                category: "Brincos"
+                category: "brincos"
             }
         ];
 
@@ -1338,6 +1305,8 @@
         const cartCount = document.querySelector('.cart-count');
         const totalAmount = document.querySelector('.total-amount');
         const checkoutBtn = document.getElementById('checkout-btn');
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const productCards = document.querySelectorAll('.product-card');
 
         // Adicionar produtos ao carrinho
         document.querySelectorAll('.add-to-cart').forEach(button => {
@@ -1455,6 +1424,28 @@
             
             window.open(whatsappUrl, '_blank');
         }
+
+        // Filtrar produtos por categoria
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remover classe ativa de todos os botões
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Adicionar classe ativa ao botão clicado
+                button.classList.add('active');
+                
+                const category = button.getAttribute('data-category');
+                
+                // Mostrar/ocultar produtos conforme a categoria
+                productCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.classList.add('visible');
+                    } else {
+                        card.classList.remove('visible');
+                    }
+                });
+            });
+        });
 
         // Event listeners
         checkoutBtn.addEventListener('click', checkout);
