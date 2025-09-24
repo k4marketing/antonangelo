@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANTONANGELO PRATAS - Catálogo de Produtos</title>
-     <link rel="icon" href="ico/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -360,6 +359,162 @@
             font-size: 0.9rem;
         }
 
+        /* Carrinho de Compras */
+        .cart-section {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 30px;
+            border: 1px solid rgba(218, 218, 217, 0.1);
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .cart-title {
+            font-size: 1.8rem;
+            color: var(--silver-metallic);
+        }
+
+        .cart-count {
+            background-color: var(--silver-metallic);
+            color: var(--background-dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cart-items {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(218, 218, 217, 0.1);
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .item-sku {
+            font-size: 0.8rem;
+            color: rgba(218, 218, 217, 0.7);
+        }
+
+        .item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--silver-metallic);
+            color: var(--background-dark);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .quantity-value {
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .item-price {
+            font-weight: 600;
+            color: var(--silver-metallic);
+            min-width: 80px;
+            text-align: right;
+        }
+
+        .remove-item {
+            background: none;
+            border: none;
+            color: #ff6b6b;
+            cursor: pointer;
+            margin-left: 15px;
+            font-size: 1.2rem;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-top: 1px solid rgba(218, 218, 217, 0.2);
+        }
+
+        .total-label {
+            color: var(--silver-metallic);
+        }
+
+        .total-amount {
+            color: var(--silver-metallic);
+            font-size: 1.4rem;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            background-color: var(--silver-metallic);
+            color: var(--background-dark);
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: center;
+            border: 2px solid var(--silver-metallic);
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .checkout-btn:hover {
+            background-color: transparent;
+            color: var(--silver-metallic);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(192, 192, 192, 0.3);
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 40px 0;
+            color: rgba(218, 218, 217, 0.7);
+        }
+
+        .empty-cart i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: rgba(192, 192, 192, 0.3);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -381,6 +536,40 @@
 
             .catalog-info {
                 grid-template-columns: 1fr;
+            }
+            
+            .cart-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .cart-title {
+                font-size: 1.5rem;
+            }
+            
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .item-quantity {
+                align-self: flex-end;
+            }
+            
+            .cart-total {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .total-label {
+                font-size: 1rem;
+            }
+            
+            .total-amount {
+                font-size: 1.2rem;
             }
         }
 
@@ -419,7 +608,11 @@
         <div class="container header-container">
             <div class="logo">ANTONANGELO PRATAS</div>
             <nav class="nav-links">
-                <a href="index.html">Início</a>
+                <a href="/">Home</a>
+                <a href="/#produtos">Produtos</a>
+                <a href="/#sobre">Sobre</a>
+                <a href="/#localizacao">Localização</a>
+                <a href="/#contato">Contato</a>
             </nav>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -473,6 +666,32 @@
                     <p>O catálogo se adapta automaticamente para visualização em celulares, tablets e computadores.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Carrinho de Compras -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-header">
+                <h2 class="cart-title">Seu Carrinho</h2>
+                <div class="cart-count">0 itens</div>
+            </div>
+            
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Seu carrinho está vazio</p>
+                </div>
+            </div>
+            
+            <div class="cart-total">
+                <div class="total-label">Total:</div>
+                <div class="total-amount">R$ 0,00</div>
+            </div>
+            
+            <button class="checkout-btn" id="checkout-btn">
+                <i class="fab fa-whatsapp"></i> Finalizar Pedido via WhatsApp
+            </button>
         </div>
     </section>
 
@@ -531,44 +750,159 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
+        // Produtos de exemplo
+        const products = [
+            {
+                id: 1,
+                sku: "P-001",
+                name: "Pulseira Elegance",
+                price: 299.90,
+                category: "Pulseiras",
+                image: "https://placehold.co/300x200/343433/c0c0c0?text=Pulseira+Elegance"
+            },
+            {
+                id: 2,
+                sku: "A-002",
+                name: "Anel Clássico",
+                price: 189.90,
+                category: "Anéis",
+                image: "https://placehold.co/300x200/343433/c0c0c0?text=Anel+Clássico"
+            },
+            {
+                id: 3,
+                sku: "D-003",
+                name: "Dedeira Luxo",
+                price: 149.90,
+                category: "Dedeiras",
+                image: "https://placehold.co/300x200/343433/c0c0c0?text=Dedeira+Luxo"
+            },
+            {
+                id: 4,
+                sku: "C-004",
+                name: "Corrente Premium",
+                price: 399.90,
+                category: "Correntes",
+                image: "https://placehold.co/300x200/343433/c0c0c0?text=Corrente+Premium"
+            },
+            {
+                id: 5,
+                sku: "CL-005",
+                name: "Colar Sofia",
+                price: 249.90,
+                category: "Colares",
+                image: "https://placehold.co/300x200/343433/c0c0c0?text=Colar+Sofia"
+            },
+            {
+                id: 6,
+                sku: "B-006",
+                name: "Brinco Estrela",
+                price: 129.90,
+                category: "Brincos",
+                image: "https://placehold.co/300x200/343433/c0c0c0?text=Brinco+Estrela"
+            }
+        ];
+
+        // Carrinho de compras
+        let cart = [];
+
+        // Elementos DOM
+        const cartItems = document.getElementById('cart-items');
+        const cartCount = document.querySelector('.cart-count');
+        const totalAmount = document.querySelector('.total-amount');
+        const checkoutBtn = document.getElementById('checkout-btn');
+
+        // Atualizar carrinho
+        function updateCart() {
+            // Atualizar contador
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = `${totalItems} ${totalItems === 1 ? 'item' : 'itens'}`;
+            
+            // Atualizar itens do carrinho
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Seu carrinho está vazio</p>
+                    </div>
+                `;
             } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '80px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.backgroundColor = 'var(--background-dark)';
-                navLinks.style.padding = '20px';
-                navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                cartItems.innerHTML = '';
+                cart.forEach(item => {
+                    const itemTotal = (item.price * item.quantity).toFixed(2);
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'cart-item';
+                    cartItem.innerHTML = `
+                        <div class="item-details">
+                            <div class="item-name">${item.name}</div>
+                            <div class="item-sku">Código: ${item.sku}</div>
+                        </div>
+                        <div class="item-quantity">
+                            <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                            <span class="quantity-value">${item.quantity}</span>
+                            <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                        </div>
+                        <div class="item-price">R$ ${itemTotal}</div>
+                        <button class="remove-item" onclick="removeFromCart(${item.id})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    `;
+                    cartItems.appendChild(cartItem);
+                });
             }
-        });
+            
+            // Atualizar total
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            totalAmount.textContent = `R$ ${total.toFixed(2)}`;
+        }
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    document.querySelector('.nav-links').style.display = 'none';
+        // Remover item do carrinho
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCart();
+        }
+
+        // Atualizar quantidade
+        function updateQuantity(productId, change) {
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    removeFromCart(productId);
+                } else {
+                    updateCart();
                 }
-            });
-        });
-
-        // PDF loading error handling
-        document.querySelector('.pdf-container iframe').addEventListener('load', function() {
-            // Verifica se o PDF carregou corretamente
-            try {
-                this.contentDocument; // Isso falhará se o PDF não carregar
-            } catch (e) {
-                // Se falhar, mostra o placeholder
-                this.style.display = 'none';
-                this.nextElementSibling.style.display = 'flex';
             }
-        });
+        }
+
+        // Finalizar pedido
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Seu carrinho está vazio!');
+                return;
+            }
+            
+            let message = "Olá, gostaria de finalizar este pedido:\n\n";
+            
+            cart.forEach(item => {
+                message += `- ${item.name} (código: ${item.sku}) - ${item.quantity} unidade${item.quantity > 1 ? 's' : ''}\n`;
+            });
+            
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            message += `\nTotal: R$ ${total.toFixed(2).replace('.', ',')}`;
+            
+            // Substitua 5514998801355 pelo seu número real
+            const phoneNumber = '5514998801355';
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Event listeners
+        checkoutBtn.addEventListener('click', checkout);
+
+        // Inicializar
+        updateCart();
     </script>
 </body>
 </html>
